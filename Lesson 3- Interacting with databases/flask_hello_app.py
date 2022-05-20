@@ -12,6 +12,7 @@ class Person(db.Model):
     id=db.Column(db.Integer,primary_key=True) #it automatically sets auto increment o this
     name=db.Column(db.String(),nullable=False)
 
+    #this helps when accessing the object from another file
     def __repr__(self):
         return f'<Person ID: {self.id}, name: {self.name}>'
 @app.route('/')
